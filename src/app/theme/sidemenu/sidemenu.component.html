@@ -12,11 +12,8 @@
         <li #navItem="navAccordionItem" navAccordionItem class="menu-item" routerLinkActive="active"
           [route]="menuItem.route" [type]="menuItem.type">
           @if (menuItem.type==='link') {
-            <a class="menu-heading"
-              [routerLink]="buildRoute(parentRoute.concat([menuItem.route]))"
-              matRipple [matRippleDisabled]="!ripple">
-              <ng-container [ngTemplateOutlet]="linkTypeTpl"
-                [ngTemplateOutletContext]="{item: menuItem, level: level}">
+            <a class="menu-heading" [routerLink]="buildRoute(parentRoute.concat([menuItem.route]))" matRipple [matRippleDisabled]="!ripple" style="padding-left: 16px; padding-left: 16px;">
+              <ng-container [ngTemplateOutlet]="linkTypeTpl" [ngTemplateOutletContext]="{item: menuItem, level: level}">
               </ng-container>
             </a>
           }
@@ -40,7 +37,7 @@
             <button navAccordionToggle class="menu-heading menu-toggle"
               matRipple [matRippleDisabled]="!ripple">
               <ng-container [ngTemplateOutlet]="linkTypeTpl"
-                [ngTemplateOutletContext]="{item: menuItem, level: level}">
+                <ng-container [ngTemplateOutletContext]="{item: menuItem, level: level}" style="padding-left: 10px;">
               </ng-container>
             </button>
 
