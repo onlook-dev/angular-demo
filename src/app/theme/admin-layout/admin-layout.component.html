@@ -29,7 +29,7 @@
         [showUser]="!!options.showUserPanel"
         [showHeader]="options.headerPos !== 'above'"
         (toggleCollapsed)="toggleCollapsed()"
-        [toggleChecked]="!!options.sidenavCollapsed">
+        [toggleChecked]="!!options.sidenavCollapsed" style="background-color: #0f0f0f">
       </app-sidebar>
     </mat-sidenav>
 
@@ -51,7 +51,7 @@
         <app-topmenu></app-topmenu>
       }
 
-      <div class="matero-content">
+      <div class="matero-content" style="background-color: #0d0d0d;">
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
