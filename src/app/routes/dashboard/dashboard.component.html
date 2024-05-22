@@ -7,7 +7,7 @@
     <div class="col-sm-6 col-md-3">
       <mat-card [ngClass]="['text-white', stat.color]">
         <mat-card-header>
-          <mat-card-subtitle class="text-white">{{stat.title}}</mat-card-subtitle>
+          <mat-card-subtitle class="text-white" >{{stat.title.replace('Revenue', 'Hello there')}}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <h2 class="m-y-8">{{stat.amount}}</h2>
@@ -25,10 +25,10 @@
   <!-- Charts -->
   <div class="col-md-7">
     <mat-card>
-      <mat-card-header>
+      <mat-card-header style="background-color: #d6a9a9;">
         <mat-card-title>Traffic</mat-card-title>
       </mat-card-header>
-      <mat-card-content>
+      <mat-card-content style="background-color: #ff0000">
         <div id="chart1"></div>
       </mat-card-content>
     </mat-card>
